@@ -12,18 +12,20 @@
       <form action="../controllers/snapvibe_process.php" method="POST" id="converter-form">
 
           <div class="snapvibe-form">
-
             <div class="snapvibe-header">
+              <img src="logo/snapvibe.jpg" alt="snapvibe">
               <h1>Snapvibe</h1>
-              <p>Convert youtube video into MP3 for free.</p>
+              <p>Convert youtube video into mp3 for free.</p>
             </div>
        
 
             <div class="form-text"> 
-              <input type="url" name="youtube_url" placeholder="Enter your url" required>
+              <input type="url" name="youtube_url" id="youtube_url" placeholder="Enter your url" required>
               <button type="submit" class="cnvrt-btn">Convert</button>
             </div>
-
+           
+            <div class="status-message"></div>
+            
           </div>
 
       </form>
@@ -31,6 +33,6 @@
 
 
 
- <script src="script.js"></script>
+ <script src="script.js?v=2"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #f0f4ff;
+  background: #efeff0;
   font-family: 'Segoe UI', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -22,7 +22,7 @@ body {
 .snapvibe-form {
   background: #ffffff;
   border-radius: 5px;
-  border: 0.5px solid #dde3f5;
+  border: 1px solid #dde3f5;
   padding: 2.5rem 2rem;
 }
 
@@ -33,11 +33,23 @@ body {
 
 .snapvibe-header h1 {
   font-size: 2rem;
-  font-weight: 700;
-  color: #3b5bdb;
+  font-weight: 500;
+  color: #000;
   letter-spacing: -0.5px;
   margin-bottom: 0.4rem;
+  text-transform: uppercase;
 }
+
+.snapvibe-header img {
+  width: 160px; 
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.8rem;
+  border-radius: 12px; 
+  box-shadow: 0 6px 15px rgba(59, 91, 219, 0.1); 
+  border: 1px solid #000;
+}
+
 
 .snapvibe-header p {
   font-size: 0.95rem;
@@ -56,23 +68,23 @@ body {
   border-radius: 12px;
   font-size: 0.9rem;
   color: #343a40;
-  background: #f8f9ff;
+  background: #f5f5f5;
   outline: none;
   transition: border-color 0.2s;
 }
 
 .form-text input[type="url"]::placeholder {
-  color: #adb5bd;
+  color: #000000;
 }
 
 .form-text input[type="url"]:focus {
-  border-color: #748ffc;
+  border-color: black;
   background: #fff;
 }
 
 .cnvrt-btn {
   padding: 0.7rem 1.2rem;
-  background: #4c6ef5;
+  background: rgb(85, 84, 84);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -84,9 +96,41 @@ body {
 }
 
 .cnvrt-btn:hover {
-  background: #3b5bdb;
+  background: rgb(44, 44, 44);
 }
 
 .cnvrt-btn:active {
   transform: scale(0.97);
+}
+
+.status-message {
+  margin-top: 1.2rem;
+  padding: 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.status-message.success,
+.status-message.error {
+  max-height: 60px;
+  opacity: 1;
+  padding: 0.65rem 1rem;
+}
+
+.status-message.success {
+  background: #e6fcf0;
+  color: #0ca85a;
+  border: 1px solid #b7ebd0;
+}
+
+.status-message.error {
+  background: #fff0f0;
+  color: #e03131;
+  border: 1px solid #f5c2c2;
 }
