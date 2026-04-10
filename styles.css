@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f4ff;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snapvibe-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 1.5rem;
+}
+
+.snapvibe-form {
+  background: #ffffff;
+  border-radius: 5px;
+  border: 0.5px solid #dde3f5;
+  padding: 2.5rem 2rem;
+}
+
+.snapvibe-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.snapvibe-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3b5bdb;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.4rem;
+}
+
+.snapvibe-header p {
+  font-size: 0.95rem;
+  color: #868e96;
+}
+
+.form-text {
+  display: flex;
+  gap: 10px;
+}
+
+.form-text input[type="url"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #c5cfe8;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #343a40;
+  background: #f8f9ff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-text input[type="url"]::placeholder {
+  color: #adb5bd;
+}
+
+.form-text input[type="url"]:focus {
+  border-color: #748ffc;
+  background: #fff;
+}
+
+.cnvrt-btn {
+  padding: 0.7rem 1.2rem;
+  background: #4c6ef5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.cnvrt-btn:hover {
+  background: #3b5bdb;
+}
+
+.cnvrt-btn:active {
+  transform: scale(0.97);
+}
