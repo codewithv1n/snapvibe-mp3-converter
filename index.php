@@ -30,7 +30,12 @@
 
       </form>
    </div>
-
+  
+  <footer>
+    <div class="footer-content">
+      <p>Made By: codewithv1n</p>
+    </div>
+  </footer>
 
 
  <script src="script.js?v=2"></script>
