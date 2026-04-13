@@ -35,6 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    
+    $youtube_url = preg_replace('/[&?](list|index|start_radio)=[^&]*/', '', $youtube_url);
+    $youtube_url = rtrim($youtube_url, '?&');
+
     $safe_url = escapeshellarg($youtube_url);
     
     $yt_dlp = $base_dir . '/yt-dlp.exe';
@@ -46,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $output_template = "\"" . $win_download . "%(title)s.%(ext)s\"";
 
-    $command = "\"$win_yt_dlp\" --ffmpeg-location \"$win_ffmpeg\" -x --audio-format mp3 --restrict-filenames -o $output_template $safe_url 2>&1";
+    $command = "\"$win_yt_dlp\" --ffmpeg-location \"$win_ffmpeg\" --no-playlist -x --audio-format mp3 --restrict-filenames -o $output_template $safe_url 2>&1";
     exec($command, $output, $return_var);
 
     $mp3_files = glob($download_folder . '*.mp3');
