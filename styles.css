@@ -134,3 +134,18 @@ body {
   color: #e03131;
   border: 1px solid #f5c2c2;
 }
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+.footer-content{
+    text-align: right;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #868e96;
+}
